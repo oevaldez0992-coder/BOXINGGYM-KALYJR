@@ -160,7 +160,6 @@ insert into public.planes (nombre, precio, duracion_dias)
 select * from (values
   ('Visita',        100.00,   1),
   ('Semana',        300.00,   7),
-  ('Mensualidad',   700.00,  30),
-  ('Trimestre',    1900.00,  90)
+  ('Mensualidad',  1000.00,  30)
 ) as v(nombre, precio, duracion_dias)
 where not exists (select 1 from public.planes);

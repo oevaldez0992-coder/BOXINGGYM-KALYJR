@@ -3,7 +3,7 @@
 Aplicación web para administrar el gimnasio:
 
 - **Socios:** alta, edición y baja, con datos de contacto, nivel, peso, contacto de emergencia y notas.
-- **Pagos:** cobro por plan (visita, semana, mensualidad, trimestre…). El vencimiento se calcula solo y, si el socio renueva antes de tiempo, no pierde días. Incluye totales del mes por método de pago.
+- **Pagos:** cobro por plan (visita $100, semana $300, mensualidad $1,000). El vencimiento se calcula solo y, si el socio renueva antes de tiempo, no pierde días. Incluye totales del mes por método de pago.
 - **Vencimientos:** socios por vencer (7 días), vencidos y sin pago, con botón para **recordar por WhatsApp** y cobrar.
 - **Asistencias:** registro de entrada con buscador rápido; avisa si la membresía está vencida.
 - **Rin · Sparring:** agenda diaria del rin con reservas por horario. **No permite reservas encimadas** y avisa si hay diferencia de peso, de nivel o membresía vencida.
@@ -17,7 +17,7 @@ Tecnología: React + TypeScript + Vite, con base de datos y usuarios en **Supaba
 
 1. Entra a tu proyecto en [supabase.com](https://supabase.com/dashboard).
 2. Ve a **SQL Editor → New query**, pega todo el contenido de [`supabase/schema.sql`](supabase/schema.sql) y presiona **Run**.
-   Se crean las tablas, la seguridad (solo usuarios con sesión pueden ver o editar datos) y 4 planes de ejemplo.
+   Se crean las tablas, la seguridad (solo usuarios con sesión pueden ver o editar datos) y 3 planes iniciales: Visita $100 (1 día), Semana $300 (7 días) y Mensualidad $1,000 (30 días).
 3. Ve a **Authentication → Sign In / Providers** y **desactiva "Allow new users to sign up"**, para que nadie de fuera pueda crear una cuenta.
 4. Ve a **Authentication → Users → Add user → Create new user** y crea el correo y la contraseña de cada persona del staff (marca "Auto Confirm User").
 
